@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AuditTrail.Models.Audit>
+
+@{
+    ViewBag.Title = "Audit";
+}
+
+<h2>Audit</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TableName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OldData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TableIdValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TableName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OldData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TableIdValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateDate)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>

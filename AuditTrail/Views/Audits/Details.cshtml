@@ -1,0 +1,73 @@
+﻿@model AuditTrail.Models.Audit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Audit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TableName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TableName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OldData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TableIdValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TableIdValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
